@@ -1,0 +1,508 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ff_optimum.user_packages.reaxff.io package &#8212; ff_optimum 27-4-2018 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ff-optimum-user-packages-reaxff-io-package">
+<h1>ff_optimum.user_packages.reaxff.io package<a class="headerlink" href="#ff-optimum-user-packages-reaxff-io-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.atomic_mass">
+<span id="ff-optimum-user-packages-reaxff-io-atomic-mass-module"></span><h2>ff_optimum.user_packages.reaxff.io.atomic_mass module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.atomic_mass" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="ff_optimum.user_packages.reaxff.io.atomic_mass.ElementNotFoundError">
+<em class="property">exception </em><code class="descclassname">ff_optimum.user_packages.reaxff.io.atomic_mass.</code><code class="descname">ElementNotFoundError</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.atomic_mass.ElementNotFoundError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>raise when element is not found</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.atomic_mass.get_element_name_from_atomic_mass">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.atomic_mass.</code><code class="descname">get_element_name_from_atomic_mass</code><span class="sig-paren">(</span><em>_mass: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.atomic_mass.get_element_name_from_atomic_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get element string form the enumerate class by mass string</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>_mass</strong> – mass in string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">name of the element</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">atomic_masses[mid]name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#ff_optimum.user_packages.reaxff.io.atomic_mass.ElementNotFoundError" title="ff_optimum.user_packages.reaxff.io.atomic_mass.ElementNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ElementNotFoundError</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.compile_commands">
+<span id="ff-optimum-user-packages-reaxff-io-compile-commands-module"></span><h2>ff_optimum.user_packages.reaxff.io.compile_commands module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.compile_commands" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.compile_commands.compile_lammps_commands">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.compile_commands.</code><code class="descname">compile_lammps_commands</code><span class="sig-paren">(</span><em>xml_result: dict</em>, <em>flags: dict</em>, <em>reaxff_path: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.compile_commands.compile_lammps_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compile xml parse results to LAMMPS commands</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>xml_result</strong> – xml parse results of the DFT xml training data</li>
+<li><strong>flags</strong> – flags of the training data</li>
+<li><strong>reaxff_path</strong> – path of the ReaxFF parameters file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">LammpsCommandCompiler()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.coordinator">
+<span id="ff-optimum-user-packages-reaxff-io-coordinator-module"></span><h2>ff_optimum.user_packages.reaxff.io.coordinator module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.coordinator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator">
+<em class="property">class </em><code class="descclassname">ff_optimum.user_packages.reaxff.io.coordinator.</code><code class="descname">DftXmlCoordinator</code> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for reading all of the xml config</p>
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.__compiled_commands">
+<code class="descname">__compiled_commands</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.__compiled_commands" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.__training_datasets">
+<code class="descname">__training_datasets</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.__training_datasets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.__plot_informations">
+<code class="descname">__plot_informations</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.__plot_informations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.read_and_compile_configs">
+<code class="descname">read_and_compile_configs</code><span class="sig-paren">(</span><em>config_directory</em>, <em>temp_directory</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.read_and_compile_configs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.compiled_commands">
+<code class="descname">compiled_commands</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.compiled_commands" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.plot_informations">
+<code class="descname">plot_informations</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.plot_informations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">read_and_compile_configs</code><span class="sig-paren">(</span><em>config_directory: str</em>, <em>temp_directory: str = '/home/casper/ff_optimum/docs'</em><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Read and compile the xml training datasets</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>config_directory</strong> – directory containing all the xmls to be read</li>
+<li><strong>temp_directory</strong> – temporary directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_read_and_compile_dft_xml()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.training_datasets">
+<code class="descname">training_datasets</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator.training_datasets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.read_force_field">
+<span id="ff-optimum-user-packages-reaxff-io-read-force-field-module"></span><h2>ff_optimum.user_packages.reaxff.io.read_force_field module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.read_force_field" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.read_force_field.read_reactive_force_field">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.read_force_field.</code><code class="descname">read_reactive_force_field</code><span class="sig-paren">(</span><em>force_field_directory: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_force_field.read_reactive_force_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the reactive fore field parameters from file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>force_field_directory</strong> – file path of the force field</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">parameters</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – when the force field file is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code> – when the force field file is empty</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code> – when the key is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – when the number of parameters read actually is not equal to
+the one stated in the file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">ReactiveForceFieldReader()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.exceptions.FileEmptyError()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.read_package_settings">
+<span id="ff-optimum-user-packages-reaxff-io-read-package-settings-module"></span><h2>ff_optimum.user_packages.reaxff.io.read_package_settings module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.read_package_settings" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.read_package_settings.read_reaxff_setting">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.read_package_settings.</code><code class="descname">read_reaxff_setting</code><span class="sig-paren">(</span><em>setting: dict</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_package_settings.read_reaxff_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read ReaxFF package setting from config file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dictionary object contains the settings</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">__read_formation_energy_information_one_mol()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.read_training_data">
+<span id="ff-optimum-user-packages-reaxff-io-read-training-data-module"></span><h2>ff_optimum.user_packages.reaxff.io.read_training_data module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.read_training_data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader">
+<em class="property">class </em><code class="descclassname">ff_optimum.user_packages.reaxff.io.read_training_data.</code><code class="descname">DftXmlReader</code><span class="sig-paren">(</span><em>xml_path: Union[str</em>, <em>NoneType] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for reading DFT xml training data</p>
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__flags">
+<code class="descname">__flags</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__flags" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__parse_results">
+<code class="descname">__parse_results</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__parse_results" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__training_data">
+<code class="descname">__training_data</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__training_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__plot_values">
+<code class="descname">__plot_values</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.__plot_values" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.read_xml">
+<code class="descname">read_xml</code><span class="sig-paren">(</span><em>xml_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.read_xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>read the DFT xml</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.flags">
+<code class="descname">flags</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.plot_values">
+<code class="descname">plot_values</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.plot_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">read_xml</code><span class="sig-paren">(</span><em>xml_path: str</em><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Read the DFT xml training data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>xml_path</strong> – file path of the xml training data file</li>
+<li><strong>Reutrns</strong> – </li>
+<li><strong>-------</strong> – </li>
+<li><strong>None</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code> – raise when the input xml file path is not a string object</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – raise when the fle specify in the xml path is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code> – raise when the fle specify in the xml path is empty</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.utilities.xml_parse.get_text_from_node()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">DftXmlReader.__read_step()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.results">
+<code class="descname">results</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.training_data">
+<code class="descname">training_data</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_training_data.DftXmlReader.training_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io.write_force_field">
+<span id="ff-optimum-user-packages-reaxff-io-write-force-field-module"></span><h2>ff_optimum.user_packages.reaxff.io.write_force_field module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io.write_force_field" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.write_force_field.save_reactive_force_field">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.write_force_field.</code><code class="descname">save_reactive_force_field</code><span class="sig-paren">(</span><em>parameters: dict</em>, <em>directory: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.write_force_field.save_reactive_force_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the force field parameters to the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>parameters</strong> – force field parameters</li>
+<li><strong>directory</strong> – target directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_create_directory()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">ReactiveForceFieldWriter()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.io">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.io" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="ff_optimum.user_packages.reaxff.io.Coordinator">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.</code><code class="descname">Coordinator</code><a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.Coordinator" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator" title="ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ff_optimum.user_packages.reaxff.io.coordinator.DftXmlCoordinator</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.read_parameters_from_file">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.</code><code class="descname">read_parameters_from_file</code><span class="sig-paren">(</span><em>force_field_directory: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_parameters_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the reactive fore field parameters from file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>force_field_directory</strong> – file path of the force field</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">parameters</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – when the force field file is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code> – when the force field file is empty</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code> – when the key is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – when the number of parameters read actually is not equal to
+the one stated in the file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">ReactiveForceFieldReader()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.exceptions.FileEmptyError()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.read_package_setting">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.</code><code class="descname">read_package_setting</code><span class="sig-paren">(</span><em>setting: dict</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.read_package_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read ReaxFF package setting from config file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dictionary object contains the settings</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">__read_formation_energy_information_one_mol()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.io.save_parameters_to_file">
+<code class="descclassname">ff_optimum.user_packages.reaxff.io.</code><code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><em>parameters: dict</em>, <em>directory: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.io.save_parameters_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the force field parameters to the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>parameters</strong> – force field parameters</li>
+<li><strong>directory</strong> – target directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_create_directory()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">ReactiveForceFieldWriter()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ff_optimum.user_packages.reaxff.io package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.atomic_mass">ff_optimum.user_packages.reaxff.io.atomic_mass module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.compile_commands">ff_optimum.user_packages.reaxff.io.compile_commands module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.coordinator">ff_optimum.user_packages.reaxff.io.coordinator module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.read_force_field">ff_optimum.user_packages.reaxff.io.read_force_field module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.read_package_settings">ff_optimum.user_packages.reaxff.io.read_package_settings module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.read_training_data">ff_optimum.user_packages.reaxff.io.read_training_data module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io.write_force_field">ff_optimum.user_packages.reaxff.io.write_force_field module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.io">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/ff_optimum.user_packages.reaxff.io.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Casper, Hui Ching Yeung.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/source/ff_optimum.user_packages.reaxff.io.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

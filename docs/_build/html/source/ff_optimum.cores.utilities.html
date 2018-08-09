@@ -1,0 +1,1732 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ff_optimum.cores.utilities package &#8212; ff_optimum 27-4-2018 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ff-optimum-cores-utilities-package">
+<h1>ff_optimum.cores.utilities package<a class="headerlink" href="#ff-optimum-cores-utilities-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.argument_type_check">
+<span id="ff-optimum-cores-utilities-argument-type-check-module"></span><h2>ff_optimum.cores.utilities.argument_type_check module<a class="headerlink" href="#module-ff_optimum.cores.utilities.argument_type_check" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.argument_type_check.argument_type_check">
+<code class="descclassname">ff_optimum.cores.utilities.argument_type_check.</code><code class="descname">argument_type_check</code><span class="sig-paren">(</span><em>function: Callable</em><span class="sig-paren">)</span> &#x2192; Callable<a class="headerlink" href="#ff_optimum.cores.utilities.argument_type_check.argument_type_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to check whether the type of input arguments matches
+the type hint or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>function</strong> – Callable object for the function to be checked</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code> – If the input type is not match with the arguments</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.command_holder">
+<span id="ff-optimum-cores-utilities-command-holder-module"></span><h2>ff_optimum.cores.utilities.command_holder module<a class="headerlink" href="#module-ff_optimum.cores.utilities.command_holder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.utilities.command_holder.CommandsHolder">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.utilities.command_holder.</code><code class="descname">CommandsHolder</code> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.command_holder.CommandsHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class storing and excuting the compiled commands</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.command_holder.CommandsHolder.compiled_commands">
+<code class="descname">compiled_commands</code><a class="headerlink" href="#ff_optimum.cores.utilities.command_holder.CommandsHolder.compiled_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em> – Dictionary object storing the compiled commands</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.command_holder.CommandsHolder.excutor">
+<code class="descname">excutor</code><a class="headerlink" href="#ff_optimum.cores.utilities.command_holder.CommandsHolder.excutor" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>callable</em> – The callanle for executing the compiled commands</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.command_holder.CommandsHolder.execute_commands">
+<code class="descname">execute_commands</code><span class="sig-paren">(</span><em>inputs</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.command_holder.CommandsHolder.execute_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>execute the compiled commands</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">compiled_commands</code></dt>
+<dd><p>The compiled commands</p>
+<dl class="docutils">
+<dt>getter:</dt>
+<dd>retrun the compiled_commands stored in the instance</dd>
+<dt>setter:</dt>
+<dd>set the input compiled_commands to the one stored in the
+instance</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">excutor</code></dt>
+<dd><p>The executor function</p>
+<dl class="docutils">
+<dt>getter:</dt>
+<dd>retrun executor function stored in the instance</dd>
+<dt>setter:</dt>
+<dd>set executor function to the one stored in the
+instance</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">execute_commands</code><span class="sig-paren">(</span><em>inputs: Any</em><span class="sig-paren">)</span> &#x2192; Any</dt>
+<dd><p>The execute the executor function stored in the instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inputs</strong> – extra inputs for the executor function</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">the return values of the executor function</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.command_holder.CommandsHolder.temp_directory">
+<code class="descname">temp_directory</code><a class="headerlink" href="#ff_optimum.cores.utilities.command_holder.CommandsHolder.temp_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.config_reader">
+<span id="ff-optimum-cores-utilities-config-reader-module"></span><h2>ff_optimum.cores.utilities.config_reader module<a class="headerlink" href="#module-ff_optimum.cores.utilities.config_reader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.utilities.config_reader.</code><code class="descname">ConfigReader</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.algorithm_name">
+<code class="descname">algorithm_name</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.algorithm_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.alogrithm_parameters">
+<code class="descname">alogrithm_parameters</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.alogrithm_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.commands_holder_train">
+<code class="descname">commands_holder_train</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.commands_holder_train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.constraints_input">
+<code class="descname">constraints_input</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.constraints_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.constraints_source">
+<code class="descname">constraints_source</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.constraints_source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.number_of_processors">
+<code class="descname">number_of_processors</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.number_of_processors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.output_directory">
+<code class="descname">output_directory</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.output_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.package_name">
+<code class="descname">package_name</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.package_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.package_settings">
+<code class="descname">package_settings</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.package_settings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.param_initial_values">
+<code class="descname">param_initial_values</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.param_initial_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.plot_information">
+<code class="descname">plot_information</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.plot_information" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.profile">
+<code class="descname">profile</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.read_config">
+<code class="descname">read_config</code><span class="sig-paren">(</span><em>config_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.read_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for reading json config file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>config_path</strong> – The string object containing config file path</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code> – when key is not found in the config</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code> – when the input type is different with type annotatio</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">IsADirectoryError</span></code> – when the input file is a directory not a file</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">XmlNodeNotFoundError</span></code> – when the xml node is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code> – when the file is empty</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – when the file is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code> – when the function is not implemented</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConfigReader.__read_settings()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_get_filename_from_path()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_read_json()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.config_reader.ConfigReader.training_data">
+<code class="descname">training_data</code><a class="headerlink" href="#ff_optimum.cores.utilities.config_reader.ConfigReader.training_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.event_logging">
+<span id="ff-optimum-cores-utilities-event-logging-module"></span><h2>ff_optimum.cores.utilities.event_logging module<a class="headerlink" href="#module-ff_optimum.cores.utilities.event_logging" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.utilities.event_logging.</code><code class="descname">EventLogger</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></p>
+<p>Derived class of logging.Logger</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.__name">
+<code class="descname">__name</code><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.__name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – name of the logger</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.__path">
+<code class="descname">__path</code><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.__path" title="Permalink to this definition">¶</a></dt>
+<dd><p>filepath of the log file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.__max_bytes">
+<code class="descname">__max_bytes</code><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.__max_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>maximum size before file rotation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.__format">
+<code class="descname">__format</code><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.__format" title="Permalink to this definition">¶</a></dt>
+<dd><p>logging format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.debug">
+<code class="descname">debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.info">
+<code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.warning">
+<code class="descname">warning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.error">
+<code class="descname">error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.critical">
+<code class="descname">critical</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.critical" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">critical</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">debug</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">error</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">info</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.event_logging.EventLogger.logger_decorator">
+<code class="descname">logger_decorator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;<a class="headerlink" href="#ff_optimum.cores.utilities.event_logging.EventLogger.logger_decorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for including the function name and number of line in
+the logging message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>function</strong> – function to be decoratored</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the decoratored function</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">wrapper</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">warning</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.exceptions">
+<span id="ff-optimum-cores-utilities-exceptions-module"></span><h2>ff_optimum.cores.utilities.exceptions module<a class="headerlink" href="#module-ff_optimum.cores.utilities.exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="ff_optimum.cores.utilities.exceptions.FileEmptyError">
+<em class="property">exception </em><code class="descclassname">ff_optimum.cores.utilities.exceptions.</code><code class="descname">FileEmptyError</code><a class="headerlink" href="#ff_optimum.cores.utilities.exceptions.FileEmptyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>raise when a file is empty</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ff_optimum.cores.utilities.exceptions.XmlNodeNotFoundError">
+<em class="property">exception </em><code class="descclassname">ff_optimum.cores.utilities.exceptions.</code><code class="descname">XmlNodeNotFoundError</code><a class="headerlink" href="#ff_optimum.cores.utilities.exceptions.XmlNodeNotFoundError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>raise when xml node is not found</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.file_path">
+<span id="ff-optimum-cores-utilities-file-path-module"></span><h2>ff_optimum.cores.utilities.file_path module<a class="headerlink" href="#module-ff_optimum.cores.utilities.file_path" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_create_directory">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_create_directory</code><span class="sig-paren">(</span><em>directory: Union[str, pathlib.Path]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_create_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the directory recursivly if the directory is not exist</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>directory</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_get_filenames_from_directory">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_get_filenames_from_directory</code><span class="sig-paren">(</span><em>directory: str</em>, <em>extension: str = ''</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_get_filenames_from_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search through the directory and find the file with the file extension</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>directory</strong> – file directory to be searched</li>
+<li><strong>extension</strong> – file extension to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list constaining all the files with the extension in the directory</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_get_filename_from_path">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_get_filename_from_path</code><span class="sig-paren">(</span><em>filepath: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_get_filename_from_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the filename from a file path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">filename</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_get_home_directory">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_get_home_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_get_home_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the home directory of the current user</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">The home directory of the current user</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_is_directory_valid">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_is_directory_valid</code><span class="sig-paren">(</span><em>directory: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_is_directory_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the input directory is valid or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>directory</strong> – string containing the directory</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">If the directory is valid</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">True</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotADirectoryError</span></code> – If the input directory is not a directory</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – If the input directory is not exists</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_is_file_path_valid">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_is_file_path_valid</code><span class="sig-paren">(</span><em>file_path: str</em>, <em>extension: Union[str</em>, <em>NoneType] = None</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_is_file_path_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the file_path is valid or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_path</strong> – a string containing the file path</li>
+<li><strong>extension</strong> – a string containing the file extension</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">If the directory is valid</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">True</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – If the input directory is not exists</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – If the extension of the file path and the input extension
+is not match</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code> – If the file is an empty file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.__file_is_directory_exists()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.__file_check_extension()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.__file_is_empty()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_read_json">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_read_json</code><span class="sig-paren">(</span><em>file_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_read_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load json config file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config_path</strong> – File path of the json config path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Dictionary object storing the loaded json config</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_remove_file">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_remove_file</code><span class="sig-paren">(</span><em>file_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_remove_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the file path is valid or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>file_path</strong> – a string containing the file path</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotADirectoryError</span></code> – If the input file path is not a directory</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – If the input file path is not exists</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.file_is_directory_valid()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_path.file_set_path">
+<code class="descclassname">ff_optimum.cores.utilities.file_path.</code><code class="descname">file_set_path</code><span class="sig-paren">(</span><em>directory: str</em>, <em>filename: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.cores.utilities.file_path.file_set_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join the file path according to the input directory and filename</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>directory</strong> – a string containing the directory</li>
+<li><strong>filename</strong> – a string containing the filename</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String containing the joined file path</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.parallel_singleton">
+<span id="ff-optimum-cores-utilities-parallel-singleton-module"></span><h2>ff_optimum.cores.utilities.parallel_singleton module<a class="headerlink" href="#module-ff_optimum.cores.utilities.parallel_singleton" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.parallel_singleton.start_client">
+<code class="descclassname">ff_optimum.cores.utilities.parallel_singleton.</code><code class="descname">start_client</code><span class="sig-paren">(</span><em>condition_variable: threading.Condition</em>, <em>nproc: int</em>, <em>profile: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.parallel_singleton.start_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the SingletonClient, notify all the waiting thread after the client
+is initated</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>condition_variable</strong> – condition object for notifying waiting thread</li>
+<li><strong>nproc</strong> – number of processors</li>
+<li><strong>profile</strong> – name of the profile</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.parallel_singleton.wait_until_client_ready">
+<code class="descclassname">ff_optimum.cores.utilities.parallel_singleton.</code><code class="descname">wait_until_client_ready</code><span class="sig-paren">(</span><em>condition_variable: threading.Condition</em>, <em>timeout: int = 90</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.parallel_singleton.wait_until_client_ready" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until the Client is ready with a timeout 90 seconds</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>condition_variable</strong> – condition object for notifying waiting thread</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.parallel_singleton.get_client">
+<code class="descclassname">ff_optimum.cores.utilities.parallel_singleton.</code><code class="descname">get_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ff_optimum.cores.utilities.parallel_singleton.get_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown the client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ipyparallel client object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Client</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">SingletonClient()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.parallel_singleton.shutdown_client">
+<code class="descclassname">ff_optimum.cores.utilities.parallel_singleton.</code><code class="descname">shutdown_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.parallel_singleton.shutdown_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown the client when the program terminate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">SingletonClient()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.parallel_singleton.is_client_ready">
+<code class="descclassname">ff_optimum.cores.utilities.parallel_singleton.</code><code class="descname">is_client_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.parallel_singleton.is_client_ready" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">True if the ipyparallel client is ready otherwise False</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">SingletonClient()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities.xml_parse">
+<span id="ff-optimum-cores-utilities-xml-parse-module"></span><h2>ff_optimum.cores.utilities.xml_parse module<a class="headerlink" href="#module-ff_optimum.cores.utilities.xml_parse" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.xml_parse.get_root_from_file">
+<code class="descclassname">ff_optimum.cores.utilities.xml_parse.</code><code class="descname">get_root_from_file</code><span class="sig-paren">(</span><em>xml_path: str</em><span class="sig-paren">)</span> &#x2192; xml.etree.ElementTree.Element<a class="headerlink" href="#ff_optimum.cores.utilities.xml_parse.get_root_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the root of an xml file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xml_path</strong> – string containing the xml file path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">the root of the xml file</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.argument_type_check.argument_type_check()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_is_file_path_valid()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.xml_parse.get_flag_from_node">
+<code class="descclassname">ff_optimum.cores.utilities.xml_parse.</code><code class="descname">get_flag_from_node</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.xml_parse.get_flag_from_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the root of an xml file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">The flag of the xml node</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal notranslate"><span class="pre">XmlNodeNotFoundError</span></code> – If the attribute is not exists in the element</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.xml_parse.get_text_from_node">
+<code class="descclassname">ff_optimum.cores.utilities.xml_parse.</code><code class="descname">get_text_from_node</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; Union[str, NoneType]<a class="headerlink" href="#ff_optimum.cores.utilities.xml_parse.get_text_from_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the root of an xml file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">The text of the xml node</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.xml_parse.get_text_from_parent">
+<code class="descclassname">ff_optimum.cores.utilities.xml_parse.</code><code class="descname">get_text_from_parent</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.cores.utilities.xml_parse.get_text_from_parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the text from the children of a xml node by searching the attribute</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List of text</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal notranslate"><span class="pre">XmlNodeNotFoundError</span></code> – If the attribute is not exists in the element</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.xml_parse.get_text_from_iter">
+<code class="descclassname">ff_optimum.cores.utilities.xml_parse.</code><code class="descname">get_text_from_iter</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.cores.utilities.xml_parse.get_text_from_iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the text of the xml node by iterating through the attribute</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List of text</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.utilities">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ff_optimum.cores.utilities" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.argument_type_check">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">argument_type_check</code><span class="sig-paren">(</span><em>function: Callable</em><span class="sig-paren">)</span> &#x2192; Callable<a class="headerlink" href="#ff_optimum.cores.utilities.argument_type_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to check whether the type of input arguments matches
+the type hint or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>function</strong> – Callable object for the function to be checked</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code> – If the input type is not match with the arguments</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="ff_optimum.cores.utilities.CommandsHolder">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">CommandsHolder</code> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.CommandsHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class storing and excuting the compiled commands</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.CommandsHolder.compiled_commands">
+<code class="descname">compiled_commands</code><a class="headerlink" href="#ff_optimum.cores.utilities.CommandsHolder.compiled_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em> – Dictionary object storing the compiled commands</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.CommandsHolder.excutor">
+<code class="descname">excutor</code><a class="headerlink" href="#ff_optimum.cores.utilities.CommandsHolder.excutor" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>callable</em> – The callanle for executing the compiled commands</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.CommandsHolder.execute_commands">
+<code class="descname">execute_commands</code><span class="sig-paren">(</span><em>inputs</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.CommandsHolder.execute_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>execute the compiled commands</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">compiled_commands</code></dt>
+<dd><p>The compiled commands</p>
+<dl class="docutils">
+<dt>getter:</dt>
+<dd>retrun the compiled_commands stored in the instance</dd>
+<dt>setter:</dt>
+<dd>set the input compiled_commands to the one stored in the
+instance</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">excutor</code></dt>
+<dd><p>The executor function</p>
+<dl class="docutils">
+<dt>getter:</dt>
+<dd>retrun executor function stored in the instance</dd>
+<dt>setter:</dt>
+<dd>set executor function to the one stored in the
+instance</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">execute_commands</code><span class="sig-paren">(</span><em>inputs: Any</em><span class="sig-paren">)</span> &#x2192; Any</dt>
+<dd><p>The execute the executor function stored in the instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inputs</strong> – extra inputs for the executor function</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">the return values of the executor function</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.CommandsHolder.temp_directory">
+<code class="descname">temp_directory</code><a class="headerlink" href="#ff_optimum.cores.utilities.CommandsHolder.temp_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ff_optimum.cores.utilities.ConfigReader">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">ConfigReader</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.algorithm_name">
+<code class="descname">algorithm_name</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.algorithm_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.alogrithm_parameters">
+<code class="descname">alogrithm_parameters</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.alogrithm_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.commands_holder_train">
+<code class="descname">commands_holder_train</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.commands_holder_train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.constraints_input">
+<code class="descname">constraints_input</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.constraints_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.constraints_source">
+<code class="descname">constraints_source</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.constraints_source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.number_of_processors">
+<code class="descname">number_of_processors</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.number_of_processors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.output_directory">
+<code class="descname">output_directory</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.output_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.package_name">
+<code class="descname">package_name</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.package_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.package_settings">
+<code class="descname">package_settings</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.package_settings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.param_initial_values">
+<code class="descname">param_initial_values</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.param_initial_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.plot_information">
+<code class="descname">plot_information</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.plot_information" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.profile">
+<code class="descname">profile</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.ConfigReader.read_config">
+<code class="descname">read_config</code><span class="sig-paren">(</span><em>config_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.read_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for reading json config file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>config_path</strong> – The string object containing config file path</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code> – when key is not found in the config</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code> – when the input type is different with type annotatio</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">IsADirectoryError</span></code> – when the input file is a directory not a file</li>
+<li><a class="reference internal" href="#ff_optimum.cores.utilities.XmlNodeNotFoundError" title="ff_optimum.cores.utilities.XmlNodeNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">XmlNodeNotFoundError</span></code></a> – when the xml node is not found</li>
+<li><a class="reference internal" href="#ff_optimum.cores.utilities.FileEmptyError" title="ff_optimum.cores.utilities.FileEmptyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code></a> – when the file is empty</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – when the file is not found</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code> – when the function is not implemented</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConfigReader.__read_settings()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_get_filename_from_path()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_read_json()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.ConfigReader.training_data">
+<code class="descname">training_data</code><a class="headerlink" href="#ff_optimum.cores.utilities.ConfigReader.training_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ff_optimum.cores.utilities.EventLogger">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">EventLogger</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></p>
+<p>Derived class of logging.Logger</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.EventLogger.__name">
+<code class="descname">__name</code><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.__name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – name of the logger</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.EventLogger.__path">
+<code class="descname">__path</code><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.__path" title="Permalink to this definition">¶</a></dt>
+<dd><p>filepath of the log file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.EventLogger.__max_bytes">
+<code class="descname">__max_bytes</code><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.__max_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>maximum size before file rotation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.utilities.EventLogger.__format">
+<code class="descname">__format</code><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.__format" title="Permalink to this definition">¶</a></dt>
+<dd><p>logging format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.EventLogger.debug">
+<code class="descname">debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.EventLogger.info">
+<code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.EventLogger.warning">
+<code class="descname">warning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.EventLogger.error">
+<code class="descname">error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.EventLogger.critical">
+<code class="descname">critical</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.critical" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">critical</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">debug</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">error</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">info</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.utilities.EventLogger.logger_decorator">
+<code class="descname">logger_decorator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;<a class="headerlink" href="#ff_optimum.cores.utilities.EventLogger.logger_decorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for including the function name and number of line in
+the logging message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>function</strong> – function to be decoratored</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the decoratored function</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">wrapper</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">warning</code><span class="sig-paren">(</span><em>org_msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; &lt;built-in function callable&gt;</dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="ff_optimum.cores.utilities.FileEmptyError">
+<em class="property">exception </em><code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">FileEmptyError</code><a class="headerlink" href="#ff_optimum.cores.utilities.FileEmptyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>raise when a file is empty</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ff_optimum.cores.utilities.XmlNodeNotFoundError">
+<em class="property">exception </em><code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">XmlNodeNotFoundError</code><a class="headerlink" href="#ff_optimum.cores.utilities.XmlNodeNotFoundError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>raise when xml node is not found</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_create_directory">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_create_directory</code><span class="sig-paren">(</span><em>directory: Union[str, pathlib.Path]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.file_create_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the directory recursivly if the directory is not exist</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>directory</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_get_filenames_from_directory">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_get_filenames_from_directory</code><span class="sig-paren">(</span><em>directory: str</em>, <em>extension: str = ''</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.cores.utilities.file_get_filenames_from_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search through the directory and find the file with the file extension</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>directory</strong> – file directory to be searched</li>
+<li><strong>extension</strong> – file extension to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list constaining all the files with the extension in the directory</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_get_filename_from_path">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_get_filename_from_path</code><span class="sig-paren">(</span><em>filepath: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.cores.utilities.file_get_filename_from_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the filename from a file path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">filename</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_get_home_directory">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_get_home_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.cores.utilities.file_get_home_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the home directory of the current user</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">The home directory of the current user</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_is_directory_valid">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_is_directory_valid</code><span class="sig-paren">(</span><em>directory: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.file_is_directory_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the input directory is valid or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>directory</strong> – string containing the directory</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">If the directory is valid</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">True</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotADirectoryError</span></code> – If the input directory is not a directory</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – If the input directory is not exists</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_is_file_path_valid">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_is_file_path_valid</code><span class="sig-paren">(</span><em>file_path: str</em>, <em>extension: Union[str</em>, <em>NoneType] = None</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.file_is_file_path_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the file_path is valid or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_path</strong> – a string containing the file path</li>
+<li><strong>extension</strong> – a string containing the file extension</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">If the directory is valid</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">True</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – If the input directory is not exists</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – If the extension of the file path and the input extension
+is not match</li>
+<li><a class="reference internal" href="#ff_optimum.cores.utilities.FileEmptyError" title="ff_optimum.cores.utilities.FileEmptyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileEmptyError</span></code></a> – If the file is an empty file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.__file_is_directory_exists()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.__file_check_extension()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.__file_is_empty()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_read_json">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_read_json</code><span class="sig-paren">(</span><em>file_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.file_read_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load json config file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config_path</strong> – File path of the json config path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Dictionary object storing the loaded json config</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_remove_file">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_remove_file</code><span class="sig-paren">(</span><em>file_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.file_remove_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the file path is valid or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>file_path</strong> – a string containing the file path</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotADirectoryError</span></code> – If the input file path is not a directory</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> – If the input file path is not exists</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.file_system.file_path.file_is_directory_valid()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.file_set_path">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">file_set_path</code><span class="sig-paren">(</span><em>directory: str</em>, <em>filename: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ff_optimum.cores.utilities.file_set_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join the file path according to the input directory and filename</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>directory</strong> – a string containing the directory</li>
+<li><strong>filename</strong> – a string containing the filename</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String containing the joined file path</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.start_client">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">start_client</code><span class="sig-paren">(</span><em>condition_variable: threading.Condition</em>, <em>nproc: int</em>, <em>profile: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.start_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init the SingletonClient, notify all the waiting thread after the client
+is initated</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>condition_variable</strong> – condition object for notifying waiting thread</li>
+<li><strong>nproc</strong> – number of processors</li>
+<li><strong>profile</strong> – name of the profile</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.wait_until_client_ready">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">wait_until_client_ready</code><span class="sig-paren">(</span><em>condition_variable: threading.Condition</em>, <em>timeout: int = 90</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.wait_until_client_ready" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until the Client is ready with a timeout 90 seconds</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>condition_variable</strong> – condition object for notifying waiting thread</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.get_client">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">get_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ff_optimum.cores.utilities.get_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown the client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ipyparallel client object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Client</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">SingletonClient()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.shutdown_client">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">shutdown_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.utilities.shutdown_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown the client when the program terminate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">SingletonClient()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.is_client_ready">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">is_client_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.is_client_ready" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">True if the ipyparallel client is ready otherwise False</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">SingletonClient()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.get_root_from_file">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">get_root_from_file</code><span class="sig-paren">(</span><em>xml_path: str</em><span class="sig-paren">)</span> &#x2192; xml.etree.ElementTree.Element<a class="headerlink" href="#ff_optimum.cores.utilities.get_root_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the root of an xml file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>xml_path</strong> – string containing the xml file path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">the root of the xml file</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.argument_type_check.argument_type_check()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">cores.utilities.file_path.file_is_file_path_valid()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.get_flag_from_node">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">get_flag_from_node</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.utilities.get_flag_from_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the root of an xml file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">The flag of the xml node</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ff_optimum.cores.utilities.XmlNodeNotFoundError" title="ff_optimum.cores.utilities.XmlNodeNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">XmlNodeNotFoundError</span></code></a> – If the attribute is not exists in the element</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.get_text_from_node">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">get_text_from_node</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; Union[str, NoneType]<a class="headerlink" href="#ff_optimum.cores.utilities.get_text_from_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the root of an xml file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">The text of the xml node</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.get_text_from_parent">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">get_text_from_parent</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.cores.utilities.get_text_from_parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the text from the children of a xml node by searching the attribute</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List of text</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#ff_optimum.cores.utilities.XmlNodeNotFoundError" title="ff_optimum.cores.utilities.XmlNodeNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">XmlNodeNotFoundError</span></code></a> – If the attribute is not exists in the element</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.cores.utilities.get_text_from_iter">
+<code class="descclassname">ff_optimum.cores.utilities.</code><code class="descname">get_text_from_iter</code><span class="sig-paren">(</span><em>node: xml.etree.ElementTree.Element</em>, <em>attribute: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#ff_optimum.cores.utilities.get_text_from_iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the text of the xml node by iterating through the attribute</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>node</strong> – xml.etree.ElementTree.Element object of the node to be searched</li>
+<li><strong>attribute</strong> – string containing the attribute to be searched</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List of text</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">utilities.argument_type_check.argument_type_check()</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ff_optimum.cores.utilities package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.argument_type_check">ff_optimum.cores.utilities.argument_type_check module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.command_holder">ff_optimum.cores.utilities.command_holder module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.config_reader">ff_optimum.cores.utilities.config_reader module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.event_logging">ff_optimum.cores.utilities.event_logging module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.exceptions">ff_optimum.cores.utilities.exceptions module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.file_path">ff_optimum.cores.utilities.file_path module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.parallel_singleton">ff_optimum.cores.utilities.parallel_singleton module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities.xml_parse">ff_optimum.cores.utilities.xml_parse module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.utilities">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/ff_optimum.cores.utilities.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Casper, Hui Ching Yeung.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/source/ff_optimum.cores.utilities.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

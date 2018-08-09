@@ -1,0 +1,7 @@
+test\_single module
+===================
+
+.. automodule:: test_single
+    :members:
+    :undoc-members:
+    :show-inheritance:

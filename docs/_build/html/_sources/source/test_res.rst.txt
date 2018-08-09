@@ -1,0 +1,7 @@
+test\_res module
+================
+
+.. automodule:: test_res
+    :members:
+    :undoc-members:
+    :show-inheritance:

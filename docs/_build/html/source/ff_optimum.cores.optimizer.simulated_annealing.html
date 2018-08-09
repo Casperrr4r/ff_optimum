@@ -1,0 +1,681 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ff_optimum.cores.optimizer.simulated_annealing package &#8212; ff_optimum 27-4-2018 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ff-optimum-cores-optimizer-simulated-annealing-package">
+<h1>ff_optimum.cores.optimizer.simulated_annealing package<a class="headerlink" href="#ff-optimum-cores-optimizer-simulated-annealing-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ff_optimum.cores.optimizer.simulated_annealing.achrive">
+<span id="ff-optimum-cores-optimizer-simulated-annealing-achrive-module"></span><h2>ff_optimum.cores.optimizer.simulated_annealing.achrive module<a class="headerlink" href="#module-ff_optimum.cores.optimizer.simulated_annealing.achrive" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.optimizer.simulated_annealing.achrive.</code><code class="descname">Achrive</code><span class="sig-paren">(</span><em>capacity: int = 50</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for storing solutions</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.__capacity">
+<code class="descname">__capacity</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.__capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> – soft limit for the solution size</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.__solutions">
+<code class="descname">__solutions</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.__solutions" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list</em> – list of Fitness object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.__number_of_save">
+<code class="descname">__number_of_save</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.__number_of_save" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> – count of number of save</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.capacity">
+<code class="descname">capacity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.get_achrive_size">
+<code class="descname">get_achrive_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.get_achrive_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.get_objectives_names">
+<code class="descname">get_objectives_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.get_objectives_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.push_solution">
+<code class="descname">push_solution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.push_solution" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.pop_dominated_solution">
+<code class="descname">pop_dominated_solution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.pop_dominated_solution" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.dimension_reduction">
+<code class="descname">dimension_reduction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.dimension_reduction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">capacity</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.count_being_dominated_in_achrive">
+<code class="descname">count_being_dominated_in_achrive</code><span class="sig-paren">(</span><em>fitness: ff_optimum.cores.compute_builtin.multiobjectives.Fitness</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.count_being_dominated_in_achrive" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">count_being_dominated_in_solutions()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">dimension_reduction</code><span class="sig-paren">(</span><em>mode: str</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray</dt>
+<dd><p>Perform the dimension reduction</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> – LPCA or PCA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">array of objectives name to be poped</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">objectives_names_to_be_poped</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.dump_parameters_to_file">
+<code class="descname">dump_parameters_to_file</code><span class="sig-paren">(</span><em>package: &lt;built-in function callable&gt;</em>, <em>directory: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.dump_parameters_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save all the solution which is not attainment element to file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>package</strong> – module of the user package</li>
+<li><strong>directory</strong> – file directory of the parameters to be saved</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.generate_attainment_surface">
+<code class="descname">generate_attainment_surface</code><span class="sig-paren">(</span><em>target_size: int = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.generate_attainment_surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the attainmnet surface</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>target_size</strong> – size of the achrive after finish generating attainment surface</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.utilities.parallel_singleton.is_client_ready()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">generate_attainment_surface_one()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">get_achrive_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int</dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">get_objectives_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray</dt>
+<dd><p>Return a numpy ndarray object containing the objectives names</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">numpy ndarray object containing the objectives names</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">np.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.is_inside_achrive">
+<code class="descname">is_inside_achrive</code><span class="sig-paren">(</span><em>new_parameters: dict</em>, <em>package: &lt;built-in function callable&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.is_inside_achrive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the new set of parameter is inisde the achrive or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>new_parameters</strong> – new parameter set</li>
+<li><strong>package</strong> – user package module</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><em>if the parameter is inside achrive, return True</em></li>
+<li><em>Otherwise False</em></li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">pop_dominated_solution</code><span class="sig-paren">(</span><em>new_solution: dict</em><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Pop the solution being dominated by the new solution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_solution</strong> – new solution to be pushed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cores.compute_builtin.multiobjectives.Fitness.is_dominate()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">push_solution</code><span class="sig-paren">(</span><em>new_solution: ff_optimum.cores.compute_builtin.multiobjectives.Fitness</em><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>if the number of solution in the achrive is larger than the capacity
+pop all the solution dominated by the new solution</p>
+<p>Push the new solution to the achrive</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_solution</strong> – Fitness object of the new solution</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.pop_dominated_solution" title="ff_optimum.cores.optimizer.simulated_annealing.achrive.Achrive.pop_dominated_solution"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Achrive.pop_dominated_solution()</span></code></a></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing">
+<span id="ff-optimum-cores-optimizer-simulated-annealing-dominance-based-simulated-annealing-module"></span><h2>ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing module<a class="headerlink" href="#module-ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.</code><code class="descname">DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer</code><span class="sig-paren">(</span><em>number_of_processors: int, profile: str, package_name: str, package_settings: dict, parameters: Union[dict, numpy.ndarray], constraints_source: str, constraints_input: Any, command_holder_train: object, training_data: dict, plot_information: dict, alogrithm_parameters: dict, output_directory: str</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase" title="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase</span></code></a></p>
+<p>Class for the implementation of the dominance based multi-objective
+simulated annealing algorithm</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.__achrive">
+<code class="descname">__achrive</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.__achrive" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Achrive</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.optimize">
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>perform optimization</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_parameters_to_file">
+<code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_parameters_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>save the solution in the achrive to file</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Run the dominance based simulated annealing algorithm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_one_epoch()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_error_to_file">
+<code class="descname">save_error_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_error_to_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><em>filename: str</em><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Save the parameters in the achrive to file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> – no use just to compact wtih the base class</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Achrive.dump_parameters_to_file()</span></code></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing">
+<span id="ff-optimum-cores-optimizer-simulated-annealing-simulated-annealing-module"></span><h2>ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing module<a class="headerlink" href="#module-ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.</code><code class="descname">SimulatedAnnealingOptimizer</code><span class="sig-paren">(</span><em>number_of_processors: int, profile: str, package_name: str, package_settings: dict, parameters: Union[dict, numpy.ndarray], constraints_source: str, constraints_input: Any, command_holder_train: object, training_data: dict, plot_information: dict, algorithm_parameter: dict, output_directory: str</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase" title="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase</span></code></a></p>
+<p>Class for the single object simulated annealing algorithm</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.__errors_trace">
+<code class="descname">__errors_trace</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.__errors_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list</em> – List object contraining the error against temperature and steps</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.optimize">
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Union[float, dict]<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the simulated annealing algorithm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><em>best_error</em> – The global best error searched during optimzation</li>
+<li><em>best_param_values</em> – Parameters with the global best error searched during optimzation</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_one_epoch()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.save_error_to_file">
+<code class="descname">save_error_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.save_error_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the error to the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.save_parameters_to_file">
+<code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><em>filename='ffield_out'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing.SimulatedAnnealingOptimizer.save_parameters_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the parameter to the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> – filename of the parameters to be saved</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base">
+<span id="ff-optimum-cores-optimizer-simulated-annealing-simulated-annealing-base-module"></span><h2>ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base module<a class="headerlink" href="#module-ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.</code><code class="descname">SimulatedAnnealingBase</code><span class="sig-paren">(</span><em>number_of_processors: int, profile: str, package_name: str, package_settings: dict, parameters: Union[dict, numpy.ndarray], constraints_source: str, constraints_input: Any, command_holder_train: object, training_data: dict, plot_information: dict, alogrithm_parameters: dict, output_directory: str</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ff_optimum.cores.optimizer.html#ff_optimum.cores.optimizer.optimizer_base.Optimizer" title="ff_optimum.cores.optimizer.optimizer_base.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ff_optimum.cores.optimizer.optimizer_base.Optimizer</span></code></a></p>
+<p>Base class for simulated annealing algorithm</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase._number_of_epoch">
+<code class="descname">_number_of_epoch</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase._number_of_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of epoch to be run for optimization</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__initial_temperature">
+<code class="descname">__initial_temperature</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__initial_temperature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__final_temperature">
+<code class="descname">__final_temperature</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__final_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>final temperature to be achived before terminating the optimization</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__cooling_rate">
+<code class="descname">__cooling_rate</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__cooling_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>rate for annealing the temperature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__number_of_steps">
+<code class="descname">__number_of_steps</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase.__number_of_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of steps to be ran</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase._aceptance_ratio">
+<code class="descname">_aceptance_ratio</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase._aceptance_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>acceptance propability at the first step</p>
+</dd></dl>
+
+<dl class="docutils">
+<dt>_threshold</dt>
+<dd>threshold for terminating the optimization</dd>
+<dt>_beta</dt>
+<dd>control parameter for controlling the acceptance propability</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.cores.optimizer.simulated_annealing">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ff_optimum.cores.optimizer.simulated_annealing" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.optimizer.simulated_annealing.</code><code class="descname">DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer</code><span class="sig-paren">(</span><em>number_of_processors: int, profile: str, package_name: str, package_settings: dict, parameters: Union[dict, numpy.ndarray], constraints_source: str, constraints_input: Any, command_holder_train: object, training_data: dict, plot_information: dict, alogrithm_parameters: dict, output_directory: str</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase" title="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase</span></code></a></p>
+<p>Class for the implementation of the dominance based multi-objective
+simulated annealing algorithm</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.__achrive">
+<code class="descname">__achrive</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.__achrive" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Achrive</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.optimize">
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>perform optimization</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_parameters_to_file">
+<code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_parameters_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>save the solution in the achrive to file</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Run the dominance based simulated annealing algorithm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_one_epoch()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_error_to_file">
+<code class="descname">save_error_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.DominanceBasedMultiobjectiveSimulatedAnnealingOptimizer.save_error_to_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><em>filename: str</em><span class="sig-paren">)</span> &#x2192; None</dt>
+<dd><p>Save the parameters in the achrive to file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> – no use just to compact wtih the base class</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Achrive.dump_parameters_to_file()</span></code></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer">
+<em class="property">class </em><code class="descclassname">ff_optimum.cores.optimizer.simulated_annealing.</code><code class="descname">SimulatedAnnealingOptimizer</code><span class="sig-paren">(</span><em>number_of_processors: int, profile: str, package_name: str, package_settings: dict, parameters: Union[dict, numpy.ndarray], constraints_source: str, constraints_input: Any, command_holder_train: object, training_data: dict, plot_information: dict, algorithm_parameter: dict, output_directory: str</em><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase" title="ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base.SimulatedAnnealingBase</span></code></a></p>
+<p>Class for the single object simulated annealing algorithm</p>
+<dl class="attribute">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.__errors_trace">
+<code class="descname">__errors_trace</code><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.__errors_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list</em> – List object contraining the error against temperature and steps</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.optimize">
+<code class="descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Union[float, dict]<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the simulated annealing algorithm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><em>best_error</em> – The global best error searched during optimzation</li>
+<li><em>best_param_values</em> – Parameters with the global best error searched during optimzation</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_one_epoch()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.save_error_to_file">
+<code class="descname">save_error_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.save_error_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the error to the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.save_parameters_to_file">
+<code class="descname">save_parameters_to_file</code><span class="sig-paren">(</span><em>filename='ffield_out'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.cores.optimizer.simulated_annealing.SimulatedAnnealingOptimizer.save_parameters_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the parameter to the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> – filename of the parameters to be saved</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ff_optimum.cores.optimizer.simulated_annealing package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.optimizer.simulated_annealing.achrive">ff_optimum.cores.optimizer.simulated_annealing.achrive module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing">ff_optimum.cores.optimizer.simulated_annealing.dominance_based_simulated_annealing module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base">ff_optimum.cores.optimizer.simulated_annealing.simulated_annealing_base module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.cores.optimizer.simulated_annealing">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/ff_optimum.cores.optimizer.simulated_annealing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Casper, Hui Ching Yeung.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/source/ff_optimum.cores.optimizer.simulated_annealing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

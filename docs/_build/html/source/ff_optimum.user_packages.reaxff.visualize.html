@@ -1,0 +1,282 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ff_optimum.user_packages.reaxff.visualize package &#8212; ff_optimum 27-4-2018 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ff-optimum-user-packages-reaxff-visualize-package">
+<h1>ff_optimum.user_packages.reaxff.visualize package<a class="headerlink" href="#ff-optimum-user-packages-reaxff-visualize-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.visualize.plot_results">
+<span id="ff-optimum-user-packages-reaxff-visualize-plot-results-module"></span><h2>ff_optimum.user_packages.reaxff.visualize.plot_results module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.visualize.plot_results" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.plot_results.plot_reaxff_results">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.plot_results.</code><code class="descname">plot_reaxff_results</code><span class="sig-paren">(</span><em>package_settings: dict</em>, <em>plot_information: dict</em>, <em>calculated_values: dict</em>, <em>training_data: dict</em>, <em>output_directory: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.plot_results.plot_reaxff_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the calculated results of ReaxFF</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>package_settings</strong> – package settings</li>
+<li><strong>plot_information</strong> – scantype and the x axis values</li>
+<li><strong>calculated_values</strong> – ReaxFF computed values</li>
+<li><strong>training_data</strong> – DFT training data</li>
+<li><strong>output_directory</strong> – directory for saving the plot</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.visualize.print_results">
+<span id="ff-optimum-user-packages-reaxff-visualize-print-results-module"></span><h2>ff_optimum.user_packages.reaxff.visualize.print_results module<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.visualize.print_results" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.print_results.print_reaxff_error_to_screen">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.print_results.</code><code class="descname">print_reaxff_error_to_screen</code><span class="sig-paren">(</span><em>fitness: dict</em>, <em>settings</em>, <em>total_errors: list</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.print_results.print_reaxff_error_to_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the error between DFT training data and ReaxFF values to the screen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fitness</strong> – </td>
+</tr>
+</tbody>
+</table>
+<p>settings</p>
+<p>total_errors</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">__output_reaxff_error_header()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">__output_reaxff_error_one_mol()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.print_results.print_formation_energy_header">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.print_results.</code><code class="descname">print_formation_energy_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.print_results.print_formation_energy_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the header of formation energy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.print_results.print_formation_energy_one_mol">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.print_results.</code><code class="descname">print_formation_energy_one_mol</code><span class="sig-paren">(</span><em>molecule_name: str</em>, <em>composition: str</em>, <em>trial: float</em>, <em>target: float</em>, <em>error: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.print_results.print_formation_energy_one_mol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the formation energy of one molecule</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>molecule_name</strong> – Name of the molecule</li>
+<li><strong>composition</strong> – Composition of calculating the formation energy</li>
+<li><strong>trial</strong> – Formation energy computed by ReaxFF values</li>
+<li><strong>target</strong> – Formation energy computed by DFT training data</li>
+<li><strong>error</strong> – the difference between the trial and target</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ff_optimum.user_packages.reaxff.visualize">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ff_optimum.user_packages.reaxff.visualize" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.print_reaxff_error_to_screen">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.</code><code class="descname">print_reaxff_error_to_screen</code><span class="sig-paren">(</span><em>fitness: dict</em>, <em>settings</em>, <em>total_errors: list</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.print_reaxff_error_to_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the error between DFT training data and ReaxFF values to the screen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fitness</strong> – </td>
+</tr>
+</tbody>
+</table>
+<p>settings</p>
+<p>total_errors</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">__output_reaxff_error_header()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">__output_reaxff_error_one_mol()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.print_formation_energy_header">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.</code><code class="descname">print_formation_energy_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.print_formation_energy_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the header of formation energy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>None</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.print_formation_energy_one_mol">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.</code><code class="descname">print_formation_energy_one_mol</code><span class="sig-paren">(</span><em>molecule_name: str</em>, <em>composition: str</em>, <em>trial: float</em>, <em>target: float</em>, <em>error: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.print_formation_energy_one_mol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the formation energy of one molecule</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>molecule_name</strong> – Name of the molecule</li>
+<li><strong>composition</strong> – Composition of calculating the formation energy</li>
+<li><strong>trial</strong> – Formation energy computed by ReaxFF values</li>
+<li><strong>target</strong> – Formation energy computed by DFT training data</li>
+<li><strong>error</strong> – the difference between the trial and target</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ff_optimum.user_packages.reaxff.visualize.plot_fitness">
+<code class="descclassname">ff_optimum.user_packages.reaxff.visualize.</code><code class="descname">plot_fitness</code><span class="sig-paren">(</span><em>package_settings: dict</em>, <em>plot_information: dict</em>, <em>calculated_values: dict</em>, <em>training_data: dict</em>, <em>output_directory: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ff_optimum.user_packages.reaxff.visualize.plot_fitness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the calculated results of ReaxFF</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>package_settings</strong> – package settings</li>
+<li><strong>plot_information</strong> – scantype and the x axis values</li>
+<li><strong>calculated_values</strong> – ReaxFF computed values</li>
+<li><strong>training_data</strong> – DFT training data</li>
+<li><strong>output_directory</strong> – directory for saving the plot</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ff_optimum.user_packages.reaxff.visualize package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.visualize.plot_results">ff_optimum.user_packages.reaxff.visualize.plot_results module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.visualize.print_results">ff_optimum.user_packages.reaxff.visualize.print_results module</a></li>
+<li><a class="reference internal" href="#module-ff_optimum.user_packages.reaxff.visualize">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/ff_optimum.user_packages.reaxff.visualize.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Casper, Hui Ching Yeung.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/source/ff_optimum.user_packages.reaxff.visualize.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
