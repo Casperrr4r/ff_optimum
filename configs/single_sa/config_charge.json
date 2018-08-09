@@ -1,0 +1,79 @@
+{
+	"processors_setting": {
+		"number_of_processors": 1,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/ff_optimum/Li_S_BP",
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 0,
+
+		"weights": [0,0,1,0,0],
+
+		"slient": true,
+
+		"molecules": {
+
+			"BP-edge-Li2S-diss":{
+				"objectives": {
+					"charge": "mae"
+				}
+			},
+
+			"BP-edge-Li2S2-diss":{
+				"objectives": {
+					"charge": "mae"
+				}
+			},
+
+			"BP-Li2S-diss": {
+				"objectives": {
+					"charge": "mae"
+				}
+			},
+
+			"BP-Li2S2-diss": {
+				"objectives": {
+					"charge": "mae"
+				}
+			}
+
+		}
+	},
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "in/ffield_1670"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML_charge"
+		}
+	},
+
+	"alogrithm" : {
+		"name": "simulated_annealing",
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 90,
+		"cooling_rate": 0.85,
+		"number_of_steps": 1
+	},
+
+	"output": {
+		"directory": "out/charge_sa"
+	}
+}

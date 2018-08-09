@@ -1,0 +1,81 @@
+{
+	"processors_setting": {
+		"number_of_processors": 4,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/ff_optimum/Li_S_BP",
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 5,
+
+		"weights": [0,0,0,1,0],
+
+		"slient": true,
+
+		"molecules": {
+
+			"Li2S" : {
+				"objectives": {
+					"force": "rmse"
+				}
+			},
+
+			"Li2S2" : {
+				"objectives": {
+					"force": "rmse"
+				}
+			},
+
+			"Li2S3" : {
+				"objectives": {
+					"force": "rmse"
+				}
+			},
+
+			"Li2S4" : {
+				"objectives": {
+					"force": "rmse"
+				}
+			}
+		}
+	},
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "in/ffield_li2s_final"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML_Li2S"
+		}
+	},
+
+	"alogrithm" : {
+		"name": "simulated_annealing",
+		"achrive_size": 100,
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 60,
+		"cooling_rate": 0.85,
+		"number_of_steps": 5,
+		"number_of_stops": 3,
+		"reduction": 0
+	},
+
+	"output": {
+		"directory": "out/Li2S_f"
+	}
+}

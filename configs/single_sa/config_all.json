@@ -1,0 +1,179 @@
+{
+	"processors_setting": {
+		"number_of_processors": 1,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/ff_optimum/Li_S_BP",
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 2,
+
+		"slient": true,
+
+		"weights": [10,1,0,1,0],
+
+		"molecules": {
+
+			"BlueP-mono-xy": {
+				"objectives": {
+					"energy": "mae",
+					"formation": ["1 P-at", 1.0],
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+
+			"BP-edge-Li2S-diss":{
+				"objectives": {
+					"charge": "mae",
+					"energy": "mae",
+					"force": "mae",
+					"stress": "mae"
+
+				}
+
+			},
+
+			"BP-edge-Li2S2-diss":{
+				"objectives": {
+					"charge": "mae",
+					"energy": "mae",
+					"force": "mae",
+					"stress": "mae"
+
+				}
+
+			},
+
+
+			"BP-Li2S-diss": {
+				"objectives": {
+					"charge": "mae",
+					"energy": "mae",
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"BP-Li2S2-diss": {
+				"objectives": {
+					"charge": "mae",
+					"energy": "mae",
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"BP-mono-xz": {
+				"objectives": {
+					"energy": "mae",
+					"formation": ["1 P-at", 1.0],
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"BP-x": {
+				"objectives": {
+					"energy": "mae",
+					"formation": ["1 P-at", 1.0],
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"BP-y": {
+				"objectives": {
+					"energy": "mae",
+					"formation": ["1 P-at", 1.0],
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"BP-z": {
+				"objectives": {
+					"energy": "mae",
+					"formation": ["1 P-at", 1.0],
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"Li2S" : {
+				"objectives": {
+					"force": "mae"
+				}
+			},
+
+			"Li2S2" : {
+				"objectives": {
+					"force": "mae"
+				}
+			},
+
+			"Li2S3" : {
+				"objectives": {
+					"force": "mae"
+				}
+			},
+
+			"Li2S4" : {
+				"objectives": {
+					"force": "mae"
+				}
+			},
+
+			"P2-diss": {
+				"objectives": {
+					"energy": "mae",
+					"force": "mae"
+				}
+			},
+
+			"P-at": {
+				"objectives": {
+					"force": "mae"
+				}
+			}
+		}
+	},
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "in/ffield_sun"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML_all"
+		}
+	},
+
+	"alogrithm" : {
+		"name": "simulated_annealing",
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 80,
+		"cooling_rate": 0.85,
+		"aceptance_ratio": 0.4,
+		"number_of_steps": 25
+	},
+
+	"output": {
+		"directory": "out/hi"
+	}
+}

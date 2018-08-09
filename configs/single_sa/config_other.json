@@ -1,0 +1,118 @@
+{
+	"processors_setting": {
+		"number_of_processors": 4,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/24_4_2018/Param_Opt_R2/LiSP_Multi",
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 3,
+
+		"slient": true,
+
+		"weights": [10,8,0,1,0],
+
+		"molecules": {
+
+			"BlueP-mono-xy": {
+				"objectives": {
+					"energy": "mae",
+					"formation": "1 P-at",
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+
+
+			"BP-edge-Li2S2-diss":{
+				"objectives": {
+					"energy": "mae",
+					"formation": "1 P-at",
+					"force": "mae",
+					"stress": "mae"
+
+				}
+
+			},
+
+
+
+			"BP-mono-xz": {
+				"objectives": {
+					"energy": "mae",
+					"formation": "1 P-at",
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+		
+
+			"BP-y": {
+				"objectives": {
+					"energy": "mae",
+					"formation": "1 P-at",
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			"BP-z": {
+				"objectives": {
+					"energy": "mae",
+					"formation": "1 P-at",
+					"force": "mae",
+					"stress": "mae"
+				}
+			},
+
+			
+			"P2-diss": {
+				"objectives": {
+					"energy": "mae",
+					"force": "mae"
+				}
+			}
+
+		}
+	},
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "ffield_135"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML-PCA"
+		}
+	},
+
+	"alogrithm" : {
+		"name": "simulated_annealing",
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 90,
+		"cooling_rate": 0.85,
+		"acceptance_ratio": 0.2,
+		"number_of_steps": 2
+		
+	},
+
+	"output": {
+		"directory": "out"
+	}
+}

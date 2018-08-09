@@ -1,0 +1,95 @@
+{
+	"processors_setting": {
+		"number_of_processors": 4,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/24_4_2018/Param_Opt_R2/LiSP_Multi",
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 5,
+
+		"slient": true,
+
+		"molecules": {
+
+			"BlueP-mono-xy": {
+				"objectives": {
+					"force": "mae"
+				}
+			},
+
+			"BP-edge-Li2S2-diss":{
+				"objectives": {
+					"force": "mae"
+				}
+
+			},
+
+			"BP-mono-xz": {
+				"objectives": {
+					"force": "mae"
+				}
+			},
+
+			"BP-y": {
+				"objectives": {
+					"formation": "1 P-at"
+				}
+			},
+
+			"BP-z": {
+				"objectives": {
+					"formation": "1 P-at",
+					"force": "mae"
+				}
+			},
+
+			"P2-diss": {
+				"objectives": {
+					"energy": "mae",
+					"force": "mae"
+				}
+			}
+		}
+	},
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "ffield_20"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML-PCA"
+		}
+	},
+
+	"alogrithm" : {
+		"name": "dominance_based_multiobjective_simulated_annealing",
+		"achrive_size": 100,
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 8.7,
+		"cooling_rate": 0.85,
+		"acceptance_ratio": 0.3
+		"number_of_steps": 10,
+		"number_of_stops": 10,
+		"reduction": 0
+	},
+
+	"output": {
+		"directory": "out/e_f"
+	}
+}

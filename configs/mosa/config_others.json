@@ -1,0 +1,128 @@
+{
+	"processors_setting": {
+		"number_of_processors": 4,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/ff_optimum/Li_S_BP",
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 1,
+
+		"slient": true,
+
+		"molecules": {
+
+			"BlueP-mono-xy": {
+				"objectives": {
+					"energy": "rmse",
+					"formation": "1 P-at",
+					"force": "rmse"
+				}
+			},
+
+			"BP-Li2S-diss": {
+				"objectives": {
+					"energy": "rmse",
+					"force": "rmse"
+				}
+			},
+
+			"BP-Li2S2-diss": {
+				"objectives": {
+					"energy": "rmse",
+					"force": "rmse"
+				}
+			},
+
+			"BP-mono-xz": {
+				"objectives": {
+					"energy": "rmse",
+					"formation": "1 P-at",
+					"force": "rmse"
+				}
+			},
+
+			"BP-x": {
+				"objectives": {
+					"energy": "rmse",
+					"formation": "1 P-at",
+					"force": "rmse"
+				}
+			},
+
+			"BP-y": {
+				"objectives": {
+					"energy": "rmse",
+					"formation": "1 P-at",
+					"force": "rmse"
+				}
+			},
+
+			"BP-z": {
+				"objectives": {
+					"energy": "rmse",
+					"formation": "1 P-at",
+					"force": "rmse"
+				}
+			},
+
+			"Li2S" : {
+				"objectives": {
+					"force": "rmse"
+				}
+			},
+
+			"Li2S2" : {
+				"objectives": {
+					"force": "rmse"
+				}
+			},
+
+			"P2-diss": {
+				"objectives": {
+					"energy": "rmse",
+					"force": "rmse"
+				}
+			}
+		}
+	},
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "in/ffield_1670"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML_all"
+		}
+	},
+
+	"alogrithm" : {
+		"name": "dominance_based_multiobjective_simulated_annealing",
+		"achrive_size": 100,
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 90,
+		"cooling_rate": 0.85,
+		"number_of_steps": 1,
+		"number_of_stops": 3,
+		"reduction": 0
+	},
+
+	"output": {
+		"directory": "out/LPCA"
+	}
+}

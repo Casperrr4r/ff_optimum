@@ -1,0 +1,82 @@
+{
+	"processors_setting": {
+		"number_of_processors": 4,
+		"profile": "default"
+	},
+
+	"directory": "/home/casper/ff_optimum/Li_S_BP",
+
+	"input": {
+
+		"parameters": {
+			"source": "file",
+			"input": "in/ffield_36"
+		},
+
+		"constraint": {
+			"source": "default",
+			"input": null
+		},
+
+		"training_data": {
+			"type": "xml",
+			"mode": "all",
+			"input": "XML_charge"
+		}
+	},
+
+	"package": {
+
+		"name": "reaxff",
+
+		"optimization_level": 0,
+
+		"slient": true,
+
+		"molecules": {
+
+			"BP-edge-Li2S-diss":{
+				"objectives": {
+					"charge": "mae"
+				}
+			},
+
+			"BP-Li2S-diss": {
+				"objectives": {
+					"charge": "mae"
+				}
+			},
+
+			"BP-edge-Li2S2-diss":{
+				"objectives": {
+					"charge": "mae"
+				}
+			},
+
+			"BP-Li2S2-diss": {
+				"objectives": {
+					"charge": "mae"
+				}
+			}
+
+
+		}
+	},
+
+	"alogrithm" : {
+		"name": "dominance_based_multiobjective_simulated_annealing",
+		"achrive_size": 100,
+		"epoch": 1,
+		"initial_temperature": 100,
+		"final_temperature": 3.8,
+		"cooling_rate": 0.85,
+		"number_of_steps": 20,
+		"acceptance_ratio": 0.25,
+		"number_of_stops": 3,
+		"reduction": 1
+	},
+
+	"output": {
+		"directory": "out/charge_L_PCA"
+	}
+}
