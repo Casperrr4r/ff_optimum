@@ -1,0 +1,28 @@
+<MOLECULE>
+  <NAME>li2s</NAME>
+  <CODE>vasp.5.4.1-24Jun15</CODE>
+  <UNIT>real</UNIT>
+  <FUNC>GGA</FUNC>
+  <BASIS>  **    PAW_PBE S 06Sep2000                   
+  1  Real-grid 150 150 150
+</BASIS>
+  <SPIN>1</SPIN>
+  <CHARGE>0</CHARGE>
+  <MASS>6.941 32.065</MASS>
+  <PERIODICITY>f f f</PERIODICITY>
+  <TYPES>1 2</TYPES>
+  <SCANTYPE>ATOM</SCANTYPE>
+  <STEP number="1">
+    <BOX>20.0 20.0 20.0 89.9999999795 89.9999999795 89.9999999795</BOX>
+    <TYPE>1 1 2</TYPE>
+    <X flag="true">11.80571 8.19429 10.0</X>
+    <Y flag="true">9.08331 9.08331 10.13338</Y>
+    <Z flag="true">10.0 10.0 10.0</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0223921339 -0.0223921339 0.0</FX>
+    <FY flag="true">-0.0097547607 -0.0097547607 0.0195095214</FY>
+    <FZ flag="true">0.0 0.0 0.0</FZ>
+    <STRESS flag="false" />
+    <ENERGY flag="true">-184.750805689</ENERGY>
+  </STEP>
+</MOLECULE>

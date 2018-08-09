@@ -1,0 +1,261 @@
+<MOLECULE>
+  <NAME>bluep-mono-xy</NAME>
+  <CODE>vasp.5.4.1-24Jun15</CODE>
+  <UNIT>real</UNIT>
+  <FUNC>GGA</FUNC>
+  <BASIS>  30  Real-grid 16 16 224
+</BASIS>
+  <SPIN>1</SPIN>
+  <CHARGE>0</CHARGE>
+  <MASS>30.973762</MASS>
+  <PERIODICITY>p p f</PERIODICITY>
+  <TYPES>1</TYPES>
+  <SCANTYPE>EOS</SCANTYPE>
+  <STEP number="1">
+    <BOX>2.78772871623 2.78772871623 40.0833614449 89.9999439741 89.9999994031 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.69693 2.0908</X>
+    <Y flag="true">0.40237 -0.40237</Y>
+    <Z flag="true">19.30649 20.77688</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.1507029815 -0.1507029815</FZ>
+    <STRESS flag="true">-38241.5259569 -0.0 -0.00986923169314 -0.0 -38241.5358261 0.0 -0.00986923169314 0.0 97.1132398605</STRESS>
+    <ENERGY flag="true">-220.854631566</ENERGY>
+  </STEP>
+  <STEP number="2">
+    <BOX>2.9268568464 2.9268568464 40.0833614449 89.9999466363 89.9999993744 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.73172 2.19514</X>
+    <Y flag="true">0.42245 -0.42246</Y>
+    <Z flag="true">19.37307 20.71029</Z>
+    <Q flag="false" />
+    <FX flag="true">-0.0 0.0</FX>
+    <FY flag="true">0.0 -0.0</FY>
+    <FZ flag="true">-0.2038352951 0.2038352951</FZ>
+    <STRESS flag="true">-32964.5563321 0.0 -0.00986923169314 0.0 -32964.5563321 0.0 -0.00986923169314 0.0 4.85566199302</STRESS>
+    <ENERGY flag="true">-234.961132147</ENERGY>
+  </STEP>
+  <STEP number="3">
+    <BOX>3.02909755229 3.02909755229 40.0833614449 89.9999484368 89.9999993532 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.75728 2.27182</X>
+    <Y flag="true">0.43721 -0.43721</Y>
+    <Z flag="true">19.39455 20.68882</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0288953077 -0.0288953077</FZ>
+    <STRESS flag="true">-22351.4707771 -0.0 -0.0 -0.0 -22351.4707771 0.0 -0.0 0.0 51.6456894502</STRESS>
+    <ENERGY flag="true">-243.504411757</ENERGY>
+  </STEP>
+  <STEP number="4">
+    <BOX>3.10423089826 3.10423089826 40.0833614449 89.9999496843 89.9999993377 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.77606 2.32817</X>
+    <Y flag="true">0.44806 -0.44806</Y>
+    <Z flag="true">19.40389 20.67948</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.007148879 -0.007148879</FZ>
+    <STRESS flag="true">-14253.0457189 -0.0 -0.0 -0.0 -14253.0555881 0.0 -0.0 0.0 84.5497079151</STRESS>
+    <ENERGY flag="true">-247.750337851</ENERGY>
+  </STEP>
+  <STEP number="5">
+    <BOX>3.15944393331 3.15944393331 40.0833614449 89.9999505632 89.9999993263 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.78986 2.36958</X>
+    <Y flag="true">0.45603 -0.45603</Y>
+    <Z flag="true">19.41026 20.6731</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.1825962062 -0.1825962062</FZ>
+    <STRESS flag="true">-9195.06447618 -0.0 -0.0 -0.0 -9195.06447618 0.0 -0.0 0.0 110.357748793</STRESS>
+    <ENERGY flag="true">-249.800239932</ENERGY>
+  </STEP>
+  <STEP number="6">
+    <BOX>3.20001818433 3.20001818433 40.0833614449 89.9999511898 89.9999993179 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.80001 2.40001</X>
+    <Y flag="true">0.46188 -0.46188</Y>
+    <Z flag="true">19.41506 20.66831</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0940192893 -0.0940192893</FZ>
+    <STRESS flag="true">-5908.74849161 -0.0 -0.0 -0.0 -5908.74849161 0.0 -0.0 0.0 74.3350531127</STRESS>
+    <ENERGY flag="true">-250.789316629</ENERGY>
+  </STEP>
+  <STEP number="7">
+    <BOX>3.22983487243 3.22983487243 40.0833614449 89.9999516402 89.9999993117 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.80746 2.42238</X>
+    <Y flag="true">0.46619 -0.46619</Y>
+    <Z flag="true">19.41845 20.66491</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0610883241 -0.0610883241</FZ>
+    <STRESS flag="true">-3684.92438343 -0.0 -0.0 -0.0 -3684.92438343 0.0 -0.0 0.0 53.2148972894</STRESS>
+    <ENERGY flag="true">-251.257554367</ENERGY>
+  </STEP>
+  <STEP number="8">
+    <BOX>3.25174617991 3.25174617991 40.0833614449 89.9999519659 89.9999993072 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.81294 2.43881</X>
+    <Y flag="true">0.46935 -0.46935</Y>
+    <Z flag="true">19.42088 20.66248</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0535474098 -0.0535474098</FZ>
+    <STRESS flag="true">-2143.31091603 -0.0 -0.0 -0.0 -2143.31091603 0.0 -0.0 0.0 47.3723121271</STRESS>
+    <ENERGY flag="true">-251.469365966</ENERGY>
+  </STEP>
+  <STEP number="9">
+    <BOX>3.2678480821 3.2678480821 40.0833614449 89.9999522025 89.9999993039 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.81696 2.45089</X>
+    <Y flag="true">0.47167 -0.47167</Y>
+    <Z flag="true">19.42263 20.66074</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0478052457 -0.0478052457</FZ>
+    <STRESS flag="true">-1057.26118359 0.0 -0.0 0.0 -1057.26118359 0.0 -0.0 0.0 44.8457888136</STRESS>
+    <ENERGY flag="true">-251.556271429</ENERGY>
+  </STEP>
+  <STEP number="10">
+    <BOX>3.27968084262 3.27968084262 40.0833614449 89.9999523749 89.9999993014 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.81992 2.45976</X>
+    <Y flag="true">0.47338 -0.47338</Y>
+    <Z flag="true">19.42397 20.65939</Z>
+    <Q flag="false" />
+    <FX flag="true">-0.0 0.0</FX>
+    <FY flag="true">0.0 -0.0</FY>
+    <FZ flag="true">-0.1329691494 0.1329691494</FZ>
+    <STRESS flag="true">-221.347128414 0.0 -0.0 0.0 -221.347128414 0.0 -0.0 0.0 -313.367844721</STRESS>
+    <ENERGY flag="true">-251.578916079</ENERGY>
+  </STEP>
+  <STEP number="11">
+    <BOX>3.29151360314 3.29151360314 40.0833614449 89.999952546 89.999999299 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.82288 2.46864</X>
+    <Y flag="true">0.47509 -0.47509</Y>
+    <Z flag="true">19.42516 20.6582</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0375200843 -0.0375200843</FZ>
+    <STRESS flag="true">473.229659686 -0.0 0.0 -0.0 473.229659686 -0.0 0.0 -0.0 40.2171191495</STRESS>
+    <ENERGY flag="true">-251.581542024</ENERGY>
+  </STEP>
+  <STEP number="12">
+    <BOX>3.30761550532 3.30761550532 40.0833614449 89.9999527769 89.9999992956 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.82691 2.48071</X>
+    <Y flag="true">0.47741 -0.47741</Y>
+    <Z flag="true">19.42682 20.65654</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0534090444 -0.0534090444</FZ>
+    <STRESS flag="true">1472.67688402 -0.0 0.0 -0.0 1472.67688402 -0.0 0.0 -0.0 39.0722882731</STRESS>
+    <ENERGY flag="true">-251.530945718</ENERGY>
+  </STEP>
+  <STEP number="13">
+    <BOX>3.3295268128 3.3295268128 40.0833614449 89.9999530876 89.9999992911 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.83238 2.49715</X>
+    <Y flag="true">0.48058 -0.48058</Y>
+    <Z flag="true">19.42905 20.65431</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0521406949 -0.0521406949</FZ>
+    <STRESS flag="true">2778.75126783 0.0 0.0 0.0 2778.75126783 -0.0 0.0 -0.0 31.8578799055</STRESS>
+    <ENERGY flag="true">-251.376477122</ENERGY>
+  </STEP>
+  <STEP number="14">
+    <BOX>3.35934350091 3.35934350091 40.0833614449 89.9999535038 89.9999992849 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.83984 2.51951</X>
+    <Y flag="true">0.48488 -0.48488</Y>
+    <Z flag="true">19.432 20.65136</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0469750533 -0.0469750533</FZ>
+    <STRESS flag="true">4464.58381795 -0.0 0.0 -0.0 4464.58381795 -0.0 0.0 -0.0 25.3836639148</STRESS>
+    <ENERGY flag="true">-251.012886519</ENERGY>
+  </STEP>
+  <STEP number="15">
+    <BOX>3.39991775193 3.39991775193 40.0833614449 89.9999540584 89.9999992766 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.84998 2.54994</X>
+    <Y flag="true">0.49074 -0.49074</Y>
+    <Z flag="true">19.43587 20.64749</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0391804691 -0.0391804691</FZ>
+    <STRESS flag="true">6595.65688668 -0.0 0.0 -0.0 6595.65688668 -0.0 0.0 -0.0 23.3900791127</STRESS>
+    <ENERGY flag="true">-250.246051867</ENERGY>
+  </STEP>
+  <STEP number="16">
+    <BOX>3.45513078698 3.45513078698 40.0833614449 89.9999547922 89.9999992651 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.86378 2.59135</X>
+    <Y flag="true">0.4987 -0.4987</Y>
+    <Z flag="true">19.44083 20.64254</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.029748561 -0.029748561</FZ>
+    <STRESS flag="true">9195.45924545 0.0 0.0 0.0 9195.45924545 -0.0 0.0 -0.0 20.1233634223</STRESS>
+    <ENERGY flag="true">-248.731853571</ENERGY>
+  </STEP>
+  <STEP number="17">
+    <BOX>3.53026413296 3.53026413296 40.0833614449 89.9999557539 89.9999992496 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.88257 2.6477</X>
+    <Y flag="true">0.50955 -0.50955</Y>
+    <Z flag="true">19.44699 20.63638</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0306018143 -0.0306018143</FZ>
+    <STRESS flag="true">12195.0641801 -0.0 0.0 -0.0 12195.0641801 -0.0 0.0 -0.0 24.7915100132</STRESS>
+    <ENERGY flag="true">-245.880877167</ENERGY>
+  </STEP>
+  <STEP number="18">
+    <BOX>3.63250483884 3.63250483884 40.0833614449 89.9999569987 89.9999992285 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.90813 2.72438</X>
+    <Y flag="true">0.52431 -0.52431</Y>
+    <Z flag="true">19.45447 20.62889</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0031593433 -0.0031593433</FZ>
+    <STRESS flag="true">15285.9989848 0.0 0.0 0.0 15285.9989848 -0.0 0.0 -0.0 27.2982948632</STRESS>
+    <ENERGY flag="true">-240.756964496</ENERGY>
+  </STEP>
+  <STEP number="19">
+    <BOX>3.77163296901 3.77163296901 40.0833614449 89.9999585842 89.9999991997 120.00000167</BOX>
+    <TYPE>1 1</TYPE>
+    <X flag="true">0.94291 2.82872</X>
+    <Y flag="true">0.54439 -0.54439</Y>
+    <Z flag="true">19.46321 20.62015</Z>
+    <Q flag="false" />
+    <FX flag="true">0.0 -0.0</FX>
+    <FY flag="true">-0.0 0.0</FY>
+    <FZ flag="true">0.0167191525 -0.0167191525</FZ>
+    <STRESS flag="true">17842.9787473 0.0 0.0 0.0 17842.9787473 -0.0 0.0 -0.0 32.7757184529</STRESS>
+    <ENERGY flag="true">-232.052105692</ENERGY>
+  </STEP>
+</MOLECULE>
